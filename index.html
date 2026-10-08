@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Plant Medicine Poetry, words for the curious and the wild." />
+    <title>Plant Medicine Poetry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root { --ink: #000; --ash: #f5f5f5; }
+      body, main > section.hero, .prints, .collage, .natural, .understory, .inescapable, .music, footer, dialog, .book-cover { background-color: #000; }
+      .prints, .music, dialog { color: #f5f5f5; }
+      #hero-film, .hero > img { filter: saturate(1.4) contrast(1.25); }
+      .hero-overlay { background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.22)); }
+      #motion-toggle { background: rgba(0,0,0,.65); border-color: #999; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav aria-label="Primary navigation">
+        <div class="nav-left"><a href="#collection">collection</a></div>
+        <a class="wordmark" href="#top">Plant Medicine Poetry</a>
+        <div class="nav-right"><a href="#music">listen</a></div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="assets/amanita-ferns.jpg" alt="Red Amanita muscaria surrounded by green fern leaves" />
+        <video id="hero-film" muted loop playsinline preload="metadata" poster="assets/amanita-ferns.jpg" aria-hidden="true"><source src="assets/amanita-ferns.mp4" type="video/mp4"></video>
+        <button id="motion-toggle" type="button" aria-pressed="false">Play video</button>
+        <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <h1 id="hero-title">Like a more relaxed version of the Lorax,<br />see, I speak for the shrooms</h1>
+          <p>So take my words with lemon and honey<br />and at least one plant medicine friend in the room</p>
+        </div>
+      </section>
+
+      <section class="prints" id="collection" aria-labelledby="prints-title">
+        <div class="section-heading"><h2 id="prints-title">collection</h2></div>
+        <div class="print-grid">
+          <button class="print-card" data-product="riddle"><img class="book-cover" src="assets/riddle-cover.png" alt="Riddle Me This original book cover" loading="lazy"><span class="product-line"><strong>Riddle Me This</strong><em>$9.63</em></span></button>
+          <button class="print-card" data-product="mad"><img class="book-cover" src="assets/mad-cover.jpg" alt="We're All Mad Here original book cover" loading="lazy"><span class="product-line"><strong>We're All Mad Here</strong><em>$9.63</em></span></button>
+          <button class="print-card" data-product="sonder"><img class="book-cover" src="assets/sonder-cover.png" alt="Sonder and Solip original Squarespace cover" loading="lazy"><span class="product-line"><strong>Sonder &amp; Solip <small>[pre-order]</small></strong><em>$9.63</em></span></button>
+        </div>
+      </section>
+
+      <section class="collage first-collage" aria-label="Nothing to see here">
+        <div class="collage-title"><h2>Nothing<br />to see here</h2></div>
+        <img class="image-a" src="assets/moon-lake.jpg" alt="Moon over a quiet lake and pale mountains" />
+        <img class="image-b" src="assets/moss-fungi.jpg" alt="Small mushrooms growing in deep moss" />
+      </section>
+
+      <section class="natural">
+        <div class="natural-photo"></div><h2>naturally</h2>
+      </section>
+
+      <section class="understory" aria-label="Forest photographs">
+        <div class="forest-pan" aria-hidden="true"></div>
+        <figure class="amanita-card"><img src="assets/forest-fungi.jpg" alt="Small orange mushrooms growing in a mossy forest" loading="lazy" /></figure>
+      </section>
+
+      <section class="inescapable">
+        <img src="https://images.unsplash.com/photo-1539447322629-4100721554cd?auto=format&fit=crop&w=1800&q=85" alt="Volcanic shoreline and white surf" loading="lazy" />
+        <div><h2>inescapable</h2></div>
+      </section>
+
+      <section class="music" id="music" aria-label="Riddle Me This playlist">
+        <iframe title="Riddle Me This playlist by Tennyson Taggart" loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F1597686358&auto_play=false&visual=true"></iframe>
+        <a class="listen" href="https://soundcloud.com/tennyson-taggart/sets/riddle-me-this" target="_blank" rel="noreferrer">Listen on SoundCloud <span>↗</span></a>
+      </section>
+    </main>
+    <footer><span>Copyright. All rights reserved.</span></footer>
+    <dialog id="product-dialog"><button class="close" aria-label="Close product">×</button><img id="detail-cover" alt=""><div><h2 id="detail-title"></h2><p id="detail-description"></p><p>$9.63</p><a id="checkout" hidden>Checkout with Stripe ↗</a><p id="checkout-status">Checkout is being set up.</p></div></dialog>
+    <script src="site.js"></script>
+  <script src="/site-analytics.js" defer></script>
+</body>
+</html>
