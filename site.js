@@ -1,7 +1,7 @@
 const products = {
   riddle: { title: 'Riddle Me This', image: 'assets/riddle-cover.png', description: '', checkout: '' },
   mad: { title: "We're All Mad Here", image: 'assets/mad-cover.jpg', description: '', checkout: '' },
-  sonder: { title: 'Sonder & Solip [pre-order]', image: 'assets/sonder-cover.png', description: 'Shaking reveals the shaken\nand the shaker', checkout: '' }
+  sonder: { title: 'Sonder & Solip [pre-order]', image: 'assets/sonder-cover.jpg', description: 'Shaking reveals the shaken\nand the shaker', checkout: '' }
 };
 const dialog = document.querySelector('#product-dialog');
 const film = document.querySelector('#hero-film');
